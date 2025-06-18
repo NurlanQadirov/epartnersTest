@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partners</title>
+    <link rel="icon" type="image/png" href="./logoTitle.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+        :root {
+  --primary: #c8102e;
+  --dark-gray: #333333;
+  --light-gray: #f8f8f8;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation Bar */
+header {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* position: fixed; */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.logo-placeholder {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-div {
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.logo span {
+  color: black;
+}
+
+.nav-right-section {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  color: var(--dark-gray);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Language Switcher */
+.language-switcher {
+  position: relative;
+  margin-left: 30px;
+}
+
+.language-dropdown {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border: 2px solid var(--primary);
+  border-radius: 25px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+  justify-content: center;
+}
+
+.language-dropdown:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.current-lang {
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.language-dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.language-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--white);
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  min-width: 120px;
+  z-index: 1001;
+}
+
+.language-options.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-option {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-option:hover {
+  background-color: var(--light-gray);
+}
+
+.language-option.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+}
+
+.flag-az {
+  background-image: linear-gradient(
+    to bottom,
+    #0099cc 33%,
+    #ff0000 33%,
+    #ff0000 66%,
+    #00cc00 66%
+  );
+}
+
+.flag-en {
+  background-image: linear-gradient(45deg, #012169 25%, transparent 25%),
+    linear-gradient(-45deg, #012169 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #012169 75%),
+    linear-gradient(-45deg, transparent 75%, #012169 75%);
+  background-size: 8px 8px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.flag-en::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    #ce1126 20%,
+    #ffffff 20%,
+    #ffffff 40%,
+    #ce1126 40%,
+    #ce1126 60%,
+    #ffffff 60%,
+    #ffffff 80%,
+    #ce1126 80%
+  );
+  mix-blend-mode: multiply;
+}
+
+.flag-ru {
+  background: linear-gradient(
+    to bottom,
+    #ffffff 33%,
+    #0039a6 33%,
+    #0039a6 66%,
+    #d52b1e 66%
+  );
+}
+
+.mobile-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--dark-gray);
+  z-index: 1002;
+}
+/* Hero Section */
+.hero {
+  background-color: var(--light-gray);
+  padding: 150px 0 70px; /* MODIFIED: Reduced bottom padding to move the next section up */
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(200, 16, 46, 0.4);
+}
+
+/* About Section */
+.about {
+  padding: 70px 0; /* MODIFIED: Reduced top/bottom padding to move closer to hero and services */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+/* Services */
+.services-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 0; /* MODIFIED: Reduced top padding to move closer to the about section */
+}
+
+.services-title {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.hexagon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 160px);
+  grid-column-gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+  min-height: 400px;
+}
+
+.hexagon-grid::after {
+  content: "";
+  display: block;
+  grid-column: 1 / -1;
+  height: 20px;
+}
+
+.hexagon:nth-child(4),
+.hexagon:nth-child(5),
+.hexagon:nth-child(6) {
+  margin-top: -25px;
+  transform: translateX(95px);
+}
+
+.hexagon {
+  position: relative;
+  width: 160px;
+  height: 180px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s ease;
+  cursor: pointer;
+  overflow: visible;
+  z-index: 1;
+  margin: 0;
+}
+
+/* MODIFIED: Changed hover to apply to both hover and .active class for JS control */
+.hexagon:hover,
+.hexagon.active {
+  transform: scale(1.8);
+  z-index: 1000;
+  box-shadow: 0 20px 60px rgba(200, 16, 46, 0.5);
+  background: var(--primary);
+  clip-path: none;
+  border-radius: 20px;
+  width: 280px;
+  height: 180px;
+}
+
+.hexagon:nth-child(4):hover,
+.hexagon:nth-child(5):hover,
+.hexagon:nth-child(6):hover,
+.hexagon:nth-child(4).active,
+.hexagon:nth-child(5).active,
+.hexagon:nth-child(6).active {
+  transform: translateX(95px) scale(1.8);
+  clip-path: none;
+  border-radius: 20px;
+  width: 280px;
+  height: 180px;
+}
+
+/* MODIFIED: Use :has() for both hover and .active class */
+.hexagon-grid:has(.hexagon:hover) .hexagon:not(:hover),
+.hexagon-grid:has(.hexagon.active) .hexagon:not(.active) {
+  transform: translateX(200px) scale(0.8);
+  opacity: 0.3;
+  transition: all 1.5s ease;
+}
+
+.hexagon-grid:has(.hexagon:hover) .hexagon:nth-child(4):not(:hover),
+.hexagon-grid:has(.hexagon:hover) .hexagon:nth-child(5):not(:hover),
+.hexagon-grid:has(.hexagon:hover) .hexagon:nth-child(6):not(:hover),
+.hexagon-grid:has(.hexagon.active) .hexagon:nth-child(4):not(.active),
+.hexagon-grid:has(.hexagon.active) .hexagon:nth-child(5):not(.active),
+.hexagon-grid:has(.hexagon.active) .hexagon:nth-child(6):not(.active) {
+  transform: translateX(295px) scale(0.8);
+  opacity: 0.3;
+}
+
+.hexagon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  z-index: -1;
+  transition: all 1.5s ease;
+}
+
+.hexagon:hover::before,
+.hexagon.active::before {
+  background-color: transparent;
+  clip-path: none;
+}
+
+.hexagon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.hexagon-icon {
+  font-size: 2.5rem;
+  color: white;
+  transition: all 0.4s ease;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.hexagon-title {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 15px;
+  transition: all 0.4s ease;
+  margin: 0;
+  line-height: 1.2;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.hexagon:hover .hexagon-icon,
+.hexagon.active .hexagon-icon {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.hexagon:hover .hexagon-title,
+.hexagon.active .hexagon-title {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.hexagon:hover .hexagon-content,
+.hexagon.active .hexagon-content {
+  justify-content: center;
+  align-items: center;
+}
+
+.hexagon-description {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 0.5rem;
+  text-align: left;
+  padding: 0 15px;
+  width: 100%;
+  line-height: 1.5;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 30px));
+  transition: all 0.4s ease 0.2s;
+  max-width: 90%;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.hexagon-description ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hexagon-description li {
+  margin-bottom: 5px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.hexagon-description li:last-child {
+  margin-bottom: 0;
+}
+
+.hexagon-description li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.hexagon:hover .hexagon-description,
+.hexagon.active .hexagon-description {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+/* Why Choose Us Section */
+.why-choose {
+  padding: 100px 0;
+  background-color: var(--light-gray);
+}
+
+.why-choose-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.benefit {
+  flex-basis: calc(33.333% - 30px);
+  min-width: 250px;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* MODIFIED: Added transition */
+}
+
+/* MODIFIED: Added hover effect for the benefit cards */
+.benefit:hover {
+  transform: scale(1.05);
+  background-color: var(--primary);
+  box-shadow: 0 10px 25px rgba(200, 16, 46, 0.3);
+}
+
+.benefit-icon {
+  font-size: 30px;
+  color: var(--primary);
+  margin-bottom: 15px;
+  transition: color 0.3s ease; /* MODIFIED: Added transition */
+}
+
+.benefit-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease; /* MODIFIED: Added transition */
+}
+
+.benefit-description {
+  font-size: 14px;
+  color: #666;
+  transition: color 0.3s ease; /* MODIFIED: Added transition */
+}
+
+/* MODIFIED: Added hover effect for the benefit card content */
+.benefit:hover .benefit-icon,
+.benefit:hover .benefit-title,
+.benefit:hover .benefit-description {
+  color: var(--white);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+}
+
+.footer-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials a {
+  color: var(--white);
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-right-section {
+    display: none;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .nav-links .language-switcher {
+    margin: 20px auto 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  /* MODIFIED: Changed to a simple grid layout to prevent overlap */
+  .hexagon-grid {
+    grid-template-columns: repeat(2, 140px);
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+    justify-content: center;
+  }
+
+  .hexagon {
+    height: 160px;
+    width: 140px;
+  }
+
+  /* MODIFIED: Reset transforms for simple grid */
+  .hexagon:nth-child(n) {
+    margin-top: 0;
+    transform: none;
+  }
+
+  /* MODIFIED: Simplified the :has() rule */
+  .hexagon-grid:has(.hexagon:hover) .hexagon:not(:hover),
+  .hexagon-grid:has(.hexagon.active) .hexagon:not(.active) {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+
+  /* MODIFIED: Defined the expanded state for tablet */
+  .hexagon:hover,
+  .hexagon.active {
+    width: 270px;
+    height: 170px;
+    transform: scale(1.5); 
+  }
+
+  .hexagon-title {
+    font-size: 1rem;
+  }
+
+  .hexagon-description {
+    font-size: 0.4rem;
+  }
+
+  .benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit {
+    margin-bottom: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-info {
+    margin: 15px 0;
+  }
+
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-placeholder {
+    width: 240px;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hexagon-grid {
+    grid-template-columns: repeat(1, 130px);
+    grid-gap: 15px;
+    justify-content: center;
+  }
+  .hexagon:nth-child(n) {
+    margin-top: 0;
+    transform: translateX(0);
+  }
+
+  .services-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .hexagon {
+    height: 145px;
+    width: 130px;
+  }
+
+  /* MODIFIED: Defined the expanded state for mobile */
+  .hexagon:hover,
+  .hexagon.active {
+    width: 90vw;
+    max-width: 280px;
+    height: 170px;
+    transform: scale(1);
+  }
+
+  .hexagon-icon {
+    font-size: 2rem;
+  }
+
+  .hexagon-title {
+    font-size: 0.5rem;
+  }
+
+  .hexagon-description {
+    font-size: 0.4rem;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo-placeholder {
+    width: 220px;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo-placeholder">
+            <img src="./logo.png" alt="E-Partners Logo" style="height: 60px" />
+          </div>
+          <div class="nav-right-section">
+            <ul class="nav-links">
+              <li><a href="#about" data-key="nav-about">Haqqımızda</a></li>
+              <li><a href="#services" data-key="nav-services">Xidmətlər</a></li>
+              <li>
+                <a href="#why-choose" data-key="nav-why">Nə Üçün Biz</a>
+              </li>
+              <li><a href="#footer" data-key="nav-contact">Əlaqə</a></li>
+            </ul>
+            <div class="language-switcher">
+              <div class="language-dropdown" onclick="toggleLanguageDropdown()">
+                <span class="current-lang">AZ</span>
+                <i class="fas fa-chevron-down dropdown-arrow"></i>
+              </div>
+              <div class="language-options" id="languageOptions">
+                <div
+                  class="language-option active"
+                  onclick="changeLanguage('az')"
+                >
+                  <div class="flag-icon flag-az"></div>
+                  <span>Azərbaycan</span>
+                </div>
+                <div class="language-option" onclick="changeLanguage('en')">
+                  <div class="flag-icon flag-en"></div>
+                  <span>English</span>
+                </div>
+                <div class="language-option" onclick="changeLanguage('ru')">
+                  <div class="flag-icon flag-ru"></div>
+                  <span>Русский</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1 data-key="hero-title">Simplify. Strategize. Succeed</h1>
+        <p data-key="hero-text">
+          Biz İT, Marketinq, Hüquq, Maliyyə və Satınalma sahələrində ağıllı,
+          inteqrasiya olunmuş həllər təqdim edirik.
+        </p>
+        <a href="#footer" class="cta-button" data-key="hero-button"
+          >Bizimlə İşləyin</a
+        >
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title" data-key="about-title">Haqqımızda</h2>
+        <p data-key="about-text">
+          E -Partners – biznesinizin hər mərhələsində yanınızda olaraq 360
+          dərəcə konsaltinq həllərini təqdim edən şirkətdir . Biz maliyyə,
+          marketinq, hüquq, insan resursları, informasiya texnologiyaları,
+          satınalma və təlim sahələrində yüksək ixtisaslaşmış xidmətlər təqdim
+          edirik .
+          <br> Məqsədimiz : Müştərilərimizə effektiv strategiyalar təqdim
+          etməklə onların rəqabət üstünlüyünü artırmaq və davamlı inkişafı təmin
+          etməkdir . Dəyərlərimiz : Peşəkarlıq, etibarlılıq, çeviklik və
+          nəticəyə fokuslanmaq
+        </p>
+      </div>
+    </section>
+
+    <div id="services" class="services-container">
+      <h2 class="services-title" data-key="services-title">Xidmətlərimiz</h2>
+      <div class="hexagon-grid">
+        <div class="hexagon">
+          <div class="hexagon-content">
+            <i class="fas fa-balance-scale hexagon-icon"></i>
+            <div class="hexagon-title" data-key="service-law">Hüquq</div>
+            <div class="hexagon-description" data-key="service-law-desc">
+              <ul>
+                <li>Korporativ hüquq xidmətləri</li>
+                <li>Müqavilələrin hazırlanması və hüquqi təhlili</li>
+                <li>Vergi və gömrük prosedurlarında yardım</li>
+                <li>Əmək və Ailə qanunvericiliyi üzrə məsləhət xidmətləri</li>
+                <li>Mübahisələrin həlli və hüquqi risklərin idarə olunması</li>
+                <li>
+                  Lisenziyalaşdırma və dövlət orqanları ilə işlərin aparılması
+                </li>
+                <li>Məhkəmələrdə təmsilçilik</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hexagon">
+          <div class="hexagon-content">
+            <i class="fas fa-users hexagon-icon"></i>
+            <div class="hexagon-title" data-key="service-hr">
+              İnsan Resursları
+            </div>
+            <div class="hexagon-description" data-key="service-hr-desc">
+              <ul>
+                <li>İşə qəbul və namizəd seçimi</li>
+                <li>Perfomansın idarə edilməsi</li>
+                <li>Komanda motivasiyası və liderlik proqramları</li>
+                <li>İR Audit və strukturun qurulması</li>
+                <li>Daxili prosedurların hazlrlanması</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hexagon">
+          <div class="hexagon-content">
+            <i class="fas fa-handshake hexagon-icon"></i>
+            <div class="hexagon-title" data-key="service-procurement">
+              Satınalma
+            </div>
+            <div
+              class="hexagon-description"
+              data-key="service-procurement-desc"
+            >
+              <ul>
+                <li>Uyğun satınalma müsabiqəsinin seçilməsi</li>
+                <li>
+                  Uyğunluq sənədələrinin hazırlanması və portala yüklənməsi
+                </li>
+                <li>Müvafiq sorğuların verilməsi</li>
+                <li>Şikayətin verilməsi və izlənməsi</li>
+                <li>
+                  Birgə fəaliyyət üçün müvafiq bölgülü sənədlərin hazırlanması
+                </li>
+                <li>Müqavilənin hazırlanması</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hexagon">
+          <div class="hexagon-content">
+            <i class="fas fa-money-bill-wave hexagon-icon"></i>
+            <div class="hexagon-title" data-key="service-finance">Maliyyə</div>
+            <div class="hexagon-description" data-key="service-finance-desc">
+              <ul>
+                <li>Büdcələmə və maliyyə planlaşdırılması</li>
+                <li>Vergi planlaşdırılması və audit</li>
+                <li>İnvestisiya və risklərin idarə olunması</li>
+                <li>Maliyyə hesabatlarının təhlili</li>
+                <li>Nəzarət sistemlərinin qurulması</li>
+                <li>Startap və KOB-lar üçün maliyyə modelləri</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hexagon">
+          <div class="hexagon-content">
+            <i class="fas fa-bullhorn hexagon-icon"></i>
+            <div class="hexagon-title" data-key="service-marketing">
+              Marketinq
+            </div>
+            <div class="hexagon-description" data-key="service-marketing-desc">
+              <ul>
+                <li>Marketinq plan və strategiyaların yazılması</li>
+                <li>Brend inkişafı və mövqeləndirmə</li>
+                <li>Sosial media idarəçiliyi və reklam kampaniyaları</li>
+                <li>Kontent marketinqi və SEO xidmətləri</li>
+                <li>Müştəri təcrübəsinin təkmilləşdirilməsi</li>
+                <li>Analitik və performans ölçümləri</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hexagon">
+          <div class="hexagon-content">
+            <i class="fas fa-laptop-code hexagon-icon"></i>
+            <div class="hexagon-title" data-key="service-it">IT</div>
+            <div class="hexagon-description" data-key="service-it-desc">
+              <ul>
+                <li>İT strategiya və transformasiya xidmətləri</li>
+                <li>Sistem inteqrasiyası və infrastruktur quruculuğu</li>
+                <li>Kibertəhlükəsizlik həlləri</li>
+                <li>Bulud texnologiyaları və verilənlərin idarə olunması</li>
+                <li>Proqram təminatı və avtomatlaşdırma həlləri</li>
+                <li>Texniki audit və İT risklərin qiymətləndirilməsi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="why-choose" class="why-choose">
+      <div class="container">
+        <h2 class="section-title why-choose-title" data-key="why-title">
+          Nə üçün biz
+        </h2>
+        <div class="benefits">
+          <div class="benefit">
+            <div class="benefit-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="benefit-title" data-key="benefit1-title">
+              Çevik və Etibarlı
+            </h3>
+            <p class="benefit-description" data-key="benefit1-desc">
+              Biz dəyişən şəraitə tez uyğunlaşırıq, eyni zamanda ardıcıl
+              keyfiyyət və performans saxlayırıq.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3 class="benefit-title" data-key="benefit2-title">
+              Sənaye Təcrübəsi
+            </h3>
+            <p class="benefit-description" data-key="benefit2-desc">
+              Komandamız müxtəlif sənaye və sektorlarda onilliklər təcrübəsini
+              birləşdirir.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="benefit-title" data-key="benefit3-title">
+              Fərdiləşdirilmiş Həllər
+            </h3>
+            <p class="benefit-description" data-key="benefit3-desc">
+              Biz sizin unikal çətinliklərinizə və imkanlarınıza ünvanlanmış
+              fərdi strategiyalar yaradırıq.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="benefit-title" data-key="benefit4-title">
+              Müştəri Mərkəzli Yanaşma
+            </h3>
+            <p class="benefit-description" data-key="benefit4-desc">
+              Sizin müvəffəqiyyətiniz bizim prioritetimizdir. Biz etimad və
+              nəticələr əsasında davamlı tərəfdaşlıq qururuq.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="benefit-title" data-key="benefit5-title">
+              İnnovasiya və Texnologiya
+            </h3>
+            <p class="benefit-description" data-key="benefit5-desc">
+              Ən son texnologiyalar və innovativ həllərlə biznesinizi gələcəyə
+              hazırlayırıq.
+            </p>
+          </div>
+
+          <div class="benefit">
+            <div class="benefit-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="benefit-title" data-key="benefit6-title">24/7 Dəstək</h3>
+            <p class="benefit-description" data-key="benefit6-desc">
+              Hər zaman yanınızdayıq və suallarınıza cavab verməyə hazırıq.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3 class="footer-title">E-Partners</h3>
+            <p data-key="footer-desc">
+              Müvəffəqiyyət və böyümə həyata keçirən inteqrasiya edilmiş biznes
+              həlləri təqdim edirik.
+            </p>
+            <div class="footer-socials">
+              <a
+                href="https://www.instagram.com/e_partners_mmc/"
+                target="_blank"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/epartnerscompany/posts/?feedView=all"
+                target="_blank"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-info">
+            <h3 class="footer-title" data-key="footer-links">
+              Sürətli Keçidlər
+            </h3>
+            <ul class="footer-links">
+              <li><a href="#about" data-key="nav-about">Haqqımızda</a></li>
+              <li><a href="#services" data-key="nav-services">Xidmətlər</a></li>
+              <li>
+                <a href="#why-choose" data-key="nav-why">Nə Üçün Biz</a>
+              </li>
+              <li><a href="#footer" data-key="nav-contact">Əlaqə</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-info">
+            <h3 class="footer-title" data-key="footer-contact">Əlaqə</h3>
+            <ul class="footer-links">
+              <li><i class="fas fa-envelope"></i> info@e-partners.com</li>
+              <li><i class="fas fa-phone"></i>+994 12 526 66 96</li>
+              <li><i class="fa-brands fa-whatsapp"></i>+994 12 526 66 96</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>Çinar Park BM, Bina 2, Ziya
+                Bünyadov, 1965 Mərtəbə 3, Baku 1075
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p data-key="footer-copyright">
+            &copy; 2025 E-Partners. Bütün hüquqlar qorunur.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+const translations = {
+  az: {
+    "nav-about": "Haqqımızda",
+    "nav-services": "Xidmətlər",
+    "nav-why": "Nə Üçün Biz",
+    "nav-contact": "Əlaqə",
+    "hero-text":
+      "Biz İT, Marketinq, Hüquq, Maliyyə və Satınalma sahələrində ağıllı, inteqrasiya olunmuş həllər təqdim edirik.",
+    "hero-button": "Bizimlə İşləyin",
+    "about-title": "Haqqımızda",
+    "about-text":
+      "E-Partners – biznesinizin hər mərhələsində yanınızda olaraq 360 dərəcə konsaltinq həllərini təqdim edən şirkətdir. Biz maliyyə, marketinq, hüquq, insan resursları, informasiya texnologiyaları, satınalma və təlim sahələrində yüksək ixtisaslaşmış xidmətlər təqdim edirik. Məqsədimiz: Müştərilərimizə effektiv strategiyalar təqdim etməklə onların rəqabət üstünlüyünü artırmaq və davamlı inkişafı təmin etməkdir. Dəyərlərimiz: Peşəkarlıq, etibarlılıq, çeviklik və nəticəyə fokuslanmaq",
+    "services-title": "Xidmətlərimiz",
+    "service-law": "Hüquq",
+    "service-law-desc": `
+        <ul>
+            <li>Korporativ hüquq xidmətləri</li>
+            <li>Müqavilələrin hazırlanması və hüquqi təhlili</li>
+            <li>Vergi və gömrük prosedurlarında yardım</li>
+            <li>Əmək və Ailə qanunvericiliyi üzrə məsləhət xidmətləri</li>
+            <li>Mübahisələrin həlli və hüquqi risklərin idarə olunması</li>
+            <li>Lisenziyalaşdırma və dövlət orqanları ilə işlərin aparılması</li>
+            <li>Məhkəmələrdə təmsilçilik</li>
+        </ul>
+    `,
+    "service-hr": "İnsan Resursları",
+    "service-hr-desc": `
+        <ul>
+            <li>İşə qəbul və namizəd seçimi</li>
+            <li>Perfomansın idarə edilməsi</li>
+            <li>Komanda motivasiyası və liderlik proqramları</li>
+            <li>İR Audit və strukturun qurulması</li>
+            <li>Daxili prosedurların hazırlanması</li>
+        </ul>
+    `,
+    "service-procurement": "Satınalma",
+    "service-procurement-desc": `
+        <ul>
+            <li>Uyğun satınalma müsabiqəsinin seçilməsi</li>
+            <li>Uyğunluq sənədələrinin hazırlanması və portala yüklənməsi</li>
+            <li>Müvafiq sorğuların verilməsi</li>
+            <li>Şikayətin verilməsi və izlənməsi</li>
+            <li>Birgə fəaliyyət üçün müvafiq bölgülü sənədlərin hazırlanması</li>
+            <li>Müqavilənin hazırlanması</li>
+        </ul>
+    `,
+    "service-finance": "Maliyyə",
+    "service-finance-desc": `
+        <ul>
+            <li>Büdcələmə və maliyyə planlaşdırılması</li>
+            <li>Vergi planlaşdırılması və audit</li>
+            <li>İnvestisiya və risklərin idarə olunması</li>
+            <li>Maliyyə hesabatlarının təhlili</li>
+            <li>Nəzarət sistemlərinin qurulması</li>
+            <li>Startap və KOB-lar üçün maliyyə modelləri</li>
+        </ul>
+    `,
+    "service-marketing": "Marketinq",
+    "service-marketing-desc": `
+        <ul>
+            <li>Marketinq plan və strategiyaların yazılması</li>
+            <li>Brend inkişafı və mövqeləndirmə</li>
+            <li>Sosial media idarəçiliyi və reklam kampaniyaları</li>
+            <li>Kontent marketinqi və SEO xidmətləri</li>
+            <li>Müştəri təcrübəsinin təkmilləşdirilməsi</li>
+            <li>Analitik və performans ölçümləri</li>
+        </ul>
+    `,
+    "service-it": "IT",
+    "service-it-desc": `
+        <ul>
+            <li>İT strategiya və transformasiya xidmətləri</li>
+            <li>Sistem inteqrasiyası və infrastruktur quruculuğu</li>
+            <li>Kibertəhlükəsizlik həlləri</li>
+            <li>Bulud texnologiyaları və verilənlərin idarə olunması</li>
+            <li>Proqram təminatı və avtomatlaşdırma həlləri</li>
+            <li>Texniki audit və İT risklərin qiymətləndirilməsi</li>
+        </ul>
+    `,
+    "why-title": "Nə Üçün Bizi Seçməlisiniz",
+    "benefit1-title": "Çevik və Etibarlı",
+    "benefit1-desc":
+      "Biz dəyişən şəraitə tez uyğunlaşırıq, eyni zamanda ardıcıl keyfiyyət və performans saxlayırıq.",
+    "benefit2-title": "Sənaye Təcrübəsi",
+    "benefit2-desc":
+      "Komandamız müxtəlif sənaye və sektorlarda onilliklər təcrübəsini birləşdirir.",
+    "benefit3-title": "Fərdiləşdirilmiş Həllər",
+    "benefit3-desc":
+      "Biz sizin unikal çətinliklərinizə və imkanlarınıza ünvanlanmış fərdi strategiyalar yaradırıq.",
+    "benefit4-title": "Müştəri Mərkəzli Yanaşma",
+    "benefit4-desc":
+      "Sizin müvəffəqiyyətiniz bizim prioritetimizdir. Biz etimad və nəticələr əsasında davamlı tərəfdaşlıq qururuq.",
+    "benefit5-title": "İnnovasiya və Texnologiya",
+    "benefit5-desc":
+      "Ən son texnologiyalar və innovativ həllərlə biznesinizi gələcəyə hazırlayırıq.",
+    "benefit6-title": "24/7 Dəstək",
+    "benefit6-desc":
+      "Hər zaman yanınızdayıq və suallarınıza cavab verməyə hazırıq.",
+    "footer-desc":
+      "Müvəffəqiyyət və böyümə həyata keçirən inteqrasiya edilmiş biznes həlləri təqdim edirik.",
+    "footer-links": "Sürətli Keçidlər",
+    "footer-contact": "Əlaqə",
+    "footer-copyright": "© 2025 E-Partners. Bütün hüquqlar qorunur.",
+  },
+  en: {
+    "nav-about": "About",
+    "nav-services": "Services",
+    "nav-why": "Why Choose Us",
+    "nav-contact": "Contact",
+    "hero-title": "Simplify. Strategize. Succeed",
+    "hero-text":
+      "We deliver smart, integrated solutions across IT, Marketing, Law, Finance, and Procurement.",
+    "hero-button": "Work With Us",
+    "about-title": "About Us",
+    "about-text":
+      "E-Partners is a company that stands by your business at every stage, offering comprehensive 360-degree consulting solutions. We deliver highly specialized services in the fields of finance, marketing, law, human resources, information technology, procurement, and training. Our mission: To enhance our clients' competitive advantage and ensure sustainable growth by offering effective strategies tailored to their needs. Our core values: Professionalism, reliability, agility, and a results-driven approach.",
+    "services-title": "Our Services",
+    "service-law": "Law",
+    "service-law-desc": `
+        <ul>
+            <li>Corporate legal services</li>
+            <li>Preparation and legal analysis of contracts</li>
+            <li>Assistance in tax and customs procedures</li>
+            <li>Consulting services on labor and family legislation</li>
+            <li>Dispute resolution and management of legal risks</li>
+            <li>Licensing and liaison with government agencies</li>
+            <li>Representation in courts</li>
+        </ul>
+    `,
+    "service-hr": "Human Resources",
+    "service-hr-desc": `
+        <ul>
+            <li>Recruitment and candidate selection</li>
+            <li>Performance management</li>
+            <li>Team motivation and leadership programs</li>
+            <li>HR Audit and organizational structuring</li>
+            <li>Preparation of internal procedures</li>
+        </ul>
+    `,
+    "service-procurement": "Procurement",
+    "service-procurement-desc": `
+        <ul>
+            <li>Selection of appropriate procurement tender</li>
+            <li>Preparation and uploading of compliance documents to the portal</li>
+            <li>Submission of relevant inquiries</li>
+            <li>Submission and tracking of complaints</li>
+            <li>Preparation of relevant allocation documents for joint activities</li>
+            <li>Contract preparation</li>
+        </ul>
+    `,
+    "service-finance": "Finance",
+    "service-finance-desc": `
+        <ul>
+            <li>Budgeting and financial planning</li>
+            <li>Tax planning and audit</li>
+            <li>Investment and risk management</li>
+            <li>Analysis of financial statements</li>
+            <li>Establishment of control systems</li>
+            <li>Financial models for startups and SMEs</li>
+        </ul>
+    `,
+    "service-marketing": "Marketing",
+    "service-marketing-desc": `
+        <ul>
+            <li>Marketing plan and strategy development</li>
+            <li>Brand development and positioning</li>
+            <li>Social media management and advertising campaigns</li>
+            <li>Content marketing and SEO services</li>
+            <li>Enhancing customer experience</li>
+            <li>Analytics and performance measurement</li>
+        </ul>
+    `,
+    "service-it": "IT",
+    "service-it-desc": `
+        <ul>
+            <li>IT strategy and transformation services</li>
+            <li>System integration and infrastructure building</li>
+            <li>Cybersecurity solutions</li>
+            <li>Cloud technologies and data management</li>
+            <li>Software and automation solutions</li>
+            <li>Technical audit and IT risk assessment</li>
+        </ul>
+    `,
+    "why-title": "Why Choose Us",
+    "benefit1-title": "Agile & Reliable",
+    "benefit1-desc":
+      "We adapt quickly to changing conditions while maintaining consistent quality and performance.",
+    "benefit2-title": "Industry Experience",
+    "benefit2-desc":
+      "Our team brings decades of combined experience across multiple industries and sectors.",
+    "benefit3-title": "Tailored Solutions",
+    "benefit3-desc":
+      "We create customized strategies that address your unique challenges and opportunities.",
+    "benefit4-title": "Client-Focused Approach",
+    "benefit4-desc":
+      "Your success is our priority. We build lasting partnerships based on trust and results.",
+    "benefit5-title": "Innovation & Technology",
+    "benefit5-desc":
+      "We prepare your business for the future with the latest technologies and innovative solutions.",
+    "benefit6-title": "24/7 Support",
+    "benefit6-desc":
+      "We are always by your side and ready to answer your questions.",
+    "footer-desc":
+      "Delivering integrated business solutions that drive success and growth.",
+    "footer-links": "Quick Links",
+    "footer-contact": "Contact",
+    "footer-copyright": "© 2025 E-Partners. All Rights Reserved.",
+  },
+  ru: {
+    "nav-about": "О нас",
+    "nav-services": "Услуги",
+    "nav-why": "Почему выбирают нас",
+    "nav-contact": "Контакты",
+    "hero-text":
+      "Мы предоставляем умные, интегрированные решения в области ИТ, маркетинга, права, финансов и закупок.",
+    "hero-button": "Работать с нами",
+    "about-title": "О нас",
+    "about-text":
+      "E-Partners — это компания, которая сопровождает ваш бизнес на всех этапах, предоставляя комплексные консалтинговые решения в формате 360 градусов. Мы предлагаем высокоспециализированные услуги в областях финансов, маркетинга, права, управления персоналом, информационных технологий, закупок и обучения. Наша цель: Повышать конкурентоспособность наших клиентов и обеспечивать их устойчивое развитие за счёт эффективных стратегий. Наши ценности: Профессионализм, надёжность, гибкость и ориентация на результат.",
+    "services-title": "Наши услуги",
+    "service-law": "Право",
+    "service-law-desc": `
+        <ul>
+            <li>Корпоративные юридические услуги</li>
+            <li>Разработка и юридический анализ договоров</li>
+            <li>Помощь в налоговых и таможенных процедурах</li>
+            <li>Консультационные услуги по трудовому и семейному законодательству</li>
+            <li>Разрешение споров и управление юридическими рисками</li>
+            <li>Лицензирование и взаимодействие с государственными органами</li>
+            <li>Представительство в судах</li>
+        </ul>
+    `,
+    "service-hr": "Человеческие ресурсы",
+    "service-hr-desc": `
+        <ul>
+            <li>Подбор и отбор кандидатов</li>
+            <li>Управление эффективностью</li>
+            <li>Программы мотивации команды и лидерства</li>
+            <li>HR-аудит и построение структуры</li>
+            <li>Разработка внутренних процедур</li>
+        </ul>
+    `,
+    "service-procurement": "Закупки",
+    "service-procurement-desc": `
+        <ul>
+            <li>Выбор подходящего тендера на закупку</li>
+            <li>Подготовка и загрузка документов соответствия на портал</li>
+            <li>Направление соответствующих запросов</li>
+            <li>Подача и отслеживание жалоб</li>
+            <li>Подготовка соответствующих документов о распределении для совместной деятельности</li>
+            <li>Подготовка договора</li>
+        </ul>
+    `,
+    "service-finance": "Финансы",
+    "service-finance-desc": `
+        <ul>
+            <li>Бюджетирование и финансовое планирование</li>
+            <li>Налоговое планирование и аудит</li>
+            <li>Управление инвестициями и рисками</li>
+            <li>Анализ финансовой отчетности</li>
+            <li>Создание систем контроля</li>
+            <li>Финансовые модели для стартапов и МСП</li>
+        </ul>
+    `,
+    "service-marketing": "Маркетинг",
+    "service-marketing-desc": `
+        <ul>
+            <li>Разработка маркетинговых планов и стратегий</li>
+            <li>Развитие бренда и позиционирование</li>
+            <li>Управление социальными сетями и рекламные кампании</li>
+            <li>Контент-маркетинг и SEO-услуги</li>
+            <li>Улучшение клиентского опыта</li>
+            <li>Аналитика и измерение эффективности</li>
+        </ul>
+    `,
+    "service-it": "ИТ",
+    "service-it-desc": `
+        <ul>
+            <li>Услуги по ИТ-стратегии и трансформации</li>
+            <li>Системная интеграция и создание инфраструктуры</li>
+            <li>Решения по кибербезопасности</li>
+            <li>Облачные технологии и управление данными</li>
+            <li>Программное обеспечение и решения для автоматизации</li>
+            <li>Технический аудит и оценка ИТ-рисков</li>
+        </ul>
+    `,
+    "why-title": "Почему выбирают нас",
+    "benefit1-title": "Гибкость и надежность",
+    "benefit1-desc":
+      "Мы быстро адаптируемся к изменяющимся условиям, поддерживая стабильное качество и производительность.",
+    "benefit2-title": "Отраслевой опыт",
+    "benefit2-desc":
+      "Наша команда объединяет десятилетия совместного опыта в различных отраслях и секторах.",
+    "benefit3-title": "Индивидуальные решения",
+    "benefit3-desc":
+      "Мы создаем индивидуальные стратегии, которые решают ваши уникальные проблемы и возможности.",
+    "benefit4-title": "Клиентоориентированный подход",
+    "benefit4-desc":
+      "Ваш успех - наш приоритет. Мы строим долгосрочные партнерские отношения на основе доверия и результатов.",
+    "benefit5-title": "Инновации и технологии",
+    "benefit5-desc":
+      "Мы готовим ваш бизнес к будущему с помощью новейших технологий и инновационных решений.",
+    "benefit6-title": "Поддержка 24/7",
+    "benefit6-desc":
+      "Мы всегда рядом с вами и готовы ответить на ваши вопросы.",
+    "footer-desc":
+      "Предоставление интегрированных бизнес-решений, которые обеспечивают успех и рост.",
+    "footer-links": "Быстрые ссылки",
+    "footer-contact": "Контакты",
+    "footer-copyright": "© 2025 E-Partners. Все права защищены.",
+  },
+};
+
+let currentLanguage = "az";
+
+function toggleLanguageDropdown() {
+  const dropdown = document.querySelector(".language-dropdown");
+  const options = document.getElementById("languageOptions");
+
+  dropdown.classList.toggle("active");
+  options.classList.toggle("active");
+}
+
+function changeLanguage(lang) {
+  if (lang === currentLanguage) {
+    toggleLanguageDropdown();
+    return;
+  }
+
+  currentLanguage = lang;
+
+  const currentLangSpan = document.querySelector(".current-lang");
+  const langCodes = { az: "AZ", en: "EN", ru: "RU" };
+  currentLangSpan.textContent = langCodes[lang];
+
+  document.querySelectorAll(".language-option").forEach((option) => {
+    option.classList.remove("active");
+  });
+  document
+    .querySelector(`.language-option[onclick="changeLanguage('${lang}')"]`)
+    .classList.add("active");
+
+  const elements = document.querySelectorAll("[data-key]");
+  elements.forEach((element) => {
+    const key = element.getAttribute("data-key");
+    if (translations[lang] && translations[lang][key]) {
+      if (element.classList.contains("hexagon-description")) {
+        element.innerHTML = translations[lang][key]; 
+      } else {
+        element.textContent = translations[lang][key]; 
+      }
+    }
+  });
+
+
+  const dropdown = document.querySelector(".language-dropdown");
+  const options = document.getElementById("languageOptions");
+  if (dropdown.classList.contains("active")) {
+    toggleLanguageDropdown();
+  }
+
+  document.documentElement.lang = lang;
+}
+
+document.addEventListener("click", function (event) {
+  const languageSwitcher = document.querySelector(".language-switcher");
+  if (languageSwitcher && !languageSwitcher.contains(event.target)) {
+    const dropdown = document.querySelector(".language-dropdown");
+    const options = document.getElementById("languageOptions");
+    if (dropdown && options) {
+      dropdown.classList.remove("active");
+      options.classList.remove("active");
+    }
+  }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+     
+      if (window.innerWidth <= 768) {
+        const navLinks = document.querySelector(".nav-links");
+        const menuIcon = document.querySelector(".mobile-menu i");
+        if (navLinks && menuIcon) {
+          navLinks.classList.remove("active");
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        }
+      }
+
+   
+      const headerOffset = document.querySelector("header").offsetHeight;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenu = document.querySelector(".mobile-menu");
+  if (!mobileMenu) return;
+
+  const menuIcon = mobileMenu.querySelector("i");
+  const navLinks = document.createElement("ul");
+  navLinks.className = "nav-links";
+
+  const desktopNavContainer = document.querySelector(".nav-right-section");
+  if (!desktopNavContainer) return;
+
+  const desktopNavLinks = desktopNavContainer.querySelector(".nav-links");
+  const languageSwitcher =
+    desktopNavContainer.querySelector(".language-switcher");
+
+  
+  const manageNavElements = () => {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+    
+      if (navLinks.children.length === 0) {
+        Array.from(desktopNavLinks.children).forEach((li) => {
+          navLinks.appendChild(li.cloneNode(true));
+        });
+
+        const clonedLanguageSwitcher = languageSwitcher.cloneNode(true);
+        navLinks.appendChild(clonedLanguageSwitcher);
+
+       
+        const clonedDropdown =
+          clonedLanguageSwitcher.querySelector(".language-dropdown");
+        const clonedOptions =
+          clonedLanguageSwitcher.querySelector(".language-options");
+
+        if (clonedDropdown && clonedOptions) {
+          clonedDropdown.addEventListener("click", function (e) {
+            e.stopPropagation();
+            clonedDropdown.classList.toggle("active");
+            clonedOptions.classList.toggle("active");
+          });
+
+          clonedLanguageSwitcher
+            .querySelectorAll(".language-option")
+            .forEach((option) => {
+              option.addEventListener("click", function (e) {
+                e.stopPropagation();
+                const lang = this.getAttribute("onclick")
+                  .replace("changeLanguage('", "")
+                  .replace("')", "");
+                changeLanguage(lang);
+              });
+            });
+        }
+      }
+    
+      if (!mobileMenu.nextElementSibling?.isEqualNode(navLinks)) {
+        mobileMenu.parentNode.appendChild(navLinks);
+      }
+    } else {
+     
+      navLinks.innerHTML = "";
+      navLinks.classList.remove("active");
+      if (menuIcon) {
+        menuIcon.classList.remove("fa-times");
+        menuIcon.classList.add("fa-bars");
+      }
+    }
+  };
+
+  // Toggle Mobile Menu
+  mobileMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle("active");
+    if (menuIcon) {
+      menuIcon.classList.toggle("fa-bars");
+      menuIcon.classList.toggle("fa-times");
+    }
+  });
+
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".language-switcher")) {
+      document
+        .querySelectorAll(".language-dropdown, .language-options")
+        .forEach((el) => {
+          el.classList.remove("active");
+        });
+    }
+  });
+
+ 
+  manageNavElements();
+  window.addEventListener("resize", manageNavElements);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hexagons = document.querySelectorAll(".hexagon");
+  const grid = document.querySelector(".hexagon-grid");
+
+  hexagons.forEach((hex) => {
+    hex.addEventListener("click", function (event) {
+      event.stopPropagation(); 
+
+      
+      const isAlreadyActive = this.classList.contains("active");
+
+     
+      hexagons.forEach((h) => h.classList.remove("active"));
+
+    
+      if (!isAlreadyActive) {
+        this.classList.add("active");
+      }
+    });
+  });
+
+
+  document.addEventListener("click", function (event) {
+  
+    if (!grid.contains(event.target)) {
+      hexagons.forEach((h) => h.classList.remove("active"));
+    }
+  });
+});
+
+    </script>
+  </body>
+</html>
